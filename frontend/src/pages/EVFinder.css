@@ -1,0 +1,226 @@
+/* =========================
+   GLOBAL / APP
+========================= */
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: #eef2f7;
+}
+
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+  height: 64px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+.main {
+  flex: 1;
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  overflow: hidden;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+.sidebar {
+  width: 340px;
+  background: #969393;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar h3 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+.sidebar label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.sidebar input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+  outline: none;
+}
+
+.sidebar input:focus {
+  border-color: #2563eb;
+}
+
+/* Checkbox */
+.checkbox {
+  margin: 14px 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.checkbox-label input {
+  width: 18px;
+  height: 18px;
+}
+
+/* =========================
+   SEARCH BUTTON
+========================= */
+.sidebar button {
+  width: 100%;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.sidebar button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+}
+
+/* =========================
+   STATION LIST
+========================= */
+.station-list {
+  margin-top: 14px;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+/* =========================
+   STATION CARD
+========================= */
+.station-card {
+  background: #f8fafc;
+  padding: 14px;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  border-left: 5px solid #2563eb;
+
+  font-size: 14px;
+  cursor: pointer;
+
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.station-card:hover {
+  background: #eef2ff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.station-card b {
+  font-size: 15px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.station-card p {
+  margin: 4px 0;
+}
+
+/* =========================
+   STATUS BADGES
+========================= */
+.green {
+  display: inline-block;
+  background: #dcfce7;
+  color: #16a34a;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.red {
+  display: inline-block;
+  background: #fee2e2;
+  color: #dc2626;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* =========================
+   MAP AREA
+========================= */
+.map-area {
+  flex: 1;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.direction-btn {
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  background: #e20b0b;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.direction-btn:hover {
+  background: #23a179;
+}
